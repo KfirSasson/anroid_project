@@ -13,13 +13,16 @@
         android:theme="@style/Theme.KotlinFinal"
         tools:targetApi="31">
         <activity
+            android:name=".TrainingListActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".AddTrainingActivity"
             android:exported="false" />
         <activity
-            android:name=".TrainingListActivity"
+            android:name=".TrainingRecyclerViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -25,6 +25,7 @@ class TrainingListActivity : AppCompatActivity() {
         trainingListView?.adapter = TrainingListAdapter(trainings)
     }
 
+
     class TrainingListAdapter(val trainings: MutableList<Training>?): BaseAdapter() {
         override fun getCount(): Int = trainings?.size ?: 0
 
