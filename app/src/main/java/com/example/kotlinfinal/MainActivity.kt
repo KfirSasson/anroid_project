@@ -18,14 +18,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val addStudentButton: Button = findViewById(R.id.btnMainAddTraining)
-        addStudentButton.setOnClickListener(::onAddTrainingButtonClicked)
+
         }
 
-    fun onAddTrainingButtonClicked(view: View){
-        val intent = Intent(this, AddTrainingActivity::class.java)
-        startActivity(intent)
-    }
+
 
 
 
