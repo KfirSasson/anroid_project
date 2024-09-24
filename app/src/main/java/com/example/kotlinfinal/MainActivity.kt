@@ -1,28 +1,78 @@
 package com.example.kotlinfinal
 
-import android.content.Intent
-import android.os.Bundle
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
-
-        val addTrainingButton: Button = findViewById(R.id.btnMainAddTraining)
-
-        addTrainingButton.setOnClickListener(::onAddTrainingButtonClicked)
+        // Set the content view to a FrameLayout
+        val frameLayout = FrameLayout(this).apply {
+            id = View.generateViewId() // Generate a unique ID for the fragment container
+            layoutParams = FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.MATCH_PARENT
+            )
         }
 
-        fun onAddTrainingButtonClicked(view: View) {
-            val intent = Intent(this, AddTrainingActivity::class.java)
-            startActivity(intent)
-        }
+        setContentView(frameLayout)
 
+        // Load the default fragment when activity starts
+        if (savedInstanceState == null) {
+            loadFragment(HomeFragment())
+        }
     }
+
+    // Function to load fragments
+    private fun loadFragment(fragment: Fragment) {
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        transaction.replace((findViewById(frameLayout.id)), fragment)
+        transaction.commit()
+    }
+
+    // HomeFragment
+    class HomeFragment : Fragment() {
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            // Inflate the layout for this fragment
+            val view = inflater.inflate(R.layout.fragment_home, container, false)
+            return view
+        }
+    }
+
+    // AddTrainingFragment
+    class AddTrainingFragment : Fragment() {
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            // Inflate the layout for this fragment
+            val view = inflater.inflate(R.layout.fragment_add_training, container, false)
+            return view
+        }
+    }
+
+    // TrainingListFragment
+    class TrainingListFragment : Fragment() {
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View? {
+            // Inflate the layout for this fragment
+            val view = inflater.inflate(R.layout.fragment_training_list, container, false)
+            return view
+        }
+    }
+}
+
