@@ -11,7 +11,8 @@ class Model {
         for (i in 0..20){
             val training = Training("$i",
                 "$i",
-                "avatar.png")
+                "avatar.png",
+                userId = "$i")
             trainings.add(training)
         }
     }

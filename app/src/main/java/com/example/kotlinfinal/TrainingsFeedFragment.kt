@@ -13,7 +13,7 @@ import com.example.kotlinfinal.Model.Model
 import com.example.kotlinfinal.Model.Training
 
 
-class TrainingsFragment : Fragment() {
+class TrainingsFeedFragment : Fragment() {
 
     var trainingRecyclerView: RecyclerView? = null
     var trainings: MutableList<Training>? = null
@@ -22,14 +22,14 @@ class TrainingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_trainings, container, false)
+        val view = inflater.inflate(R.layout.fragment_feed_trainings, container, false)
 
         trainings = Model.instance.trainings
         trainingRecyclerView = view.findViewById(R.id.rvTrainingsFrafmentList)
         trainingRecyclerView?.setHasFixedSize(true)
         trainingRecyclerView?.layoutManager = LinearLayoutManager(context)
-        val adapter = TrainingRecyclerAdapter(trainings)
 
+        val adapter = TrainingRecyclerAdapter(trainings)
         trainingRecyclerView?.adapter = adapter
 
         return view
