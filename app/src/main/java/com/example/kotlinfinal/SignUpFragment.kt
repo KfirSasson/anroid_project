@@ -35,9 +35,6 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.bnvNavigation)
-        bottomNav?.visibility = View.GONE
-
         auth = FirebaseAuth.getInstance()
 
         val signUpButton: Button = view.findViewById(R.id.btnSignInFragment)
@@ -56,6 +53,18 @@ class SignUpFragment : Fragment() {
                 signUpUser(name, email, password)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.bnvNavigation)
+        bottomNav?.visibility = View.GONE
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val bottomNav: BottomNavigationView? = activity?.findViewById(R.id.bnvNavigation)
+        bottomNav?.visibility = View.VISIBLE
     }
 
     private fun validateInput(name: String, email: String, password: String): Boolean {
@@ -90,7 +99,7 @@ class SignUpFragment : Fragment() {
                             userPassword = password
                         )
 
-                        // Save user info to Room Database (optional)
+                        // Save user info to Room Database
                         saveUserToLocalDatabase(newUser)
 
                         Toast.makeText(requireContext(), "Sign Up Successful", Toast.LENGTH_SHORT).show()
