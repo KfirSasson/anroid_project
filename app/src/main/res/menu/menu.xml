@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/trainingsFeedFragment"
+        android:icon="@drawable/avatar"
+        android:title="Trainings" />
+
+    <item
+        android:id="@+id/userFeedFragment"
+        android:icon="@drawable/avatar"
+        android:title="User Feed" />
+
+    <item
+        android:id="@+id/addTrainingFragment"
+        android:icon="@drawable/avatar"
+        android:title="Add Training" />
+
+    <item
+        android:id="@+id/weatherFragment"
+        android:icon="@drawable/avatar"
+        android:title="Weather" />
+
+</menu>

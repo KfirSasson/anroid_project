@@ -5,15 +5,26 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 
 
 class SignUpFragment : Fragment() {
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        // Find the button using findViewById
+        val signUpButton: Button = view.findViewById(R.id.btnSignInFragment)
+
+        // Set up the button click listener
+        signUpButton.setOnClickListener {
+            // Navigate to LoginFragment
+            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+        }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
