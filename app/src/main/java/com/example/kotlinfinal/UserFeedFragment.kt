@@ -25,7 +25,7 @@ class UserFeedFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_user_feed, container, false)
 
         // Filter posts to show only those uploaded by the logged-in user
-        userTrainings = Model.instance.trainings.filter { it.userId == loggedInUserId }.toMutableList()
+        /*userTrainings = Model.instance.trainings.filter { it.userId == loggedInUserId }.toMutableList()*/
 
         trainingRecyclerView = view.findViewById(R.id.rvUserFeedList)
         trainingRecyclerView?.setHasFixedSize(true)

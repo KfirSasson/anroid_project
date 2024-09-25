@@ -1,6 +1,17 @@
 package com.example.kotlinfinal.Model
 
-data class Training(val type: String,
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity
+data class Training(
+    @PrimaryKey(autoGenerate = true) val trainingId: Int = 0,
+    val type : String,
+    val description: String,
+    val img: String
+)
+/*data class Training(val type: String,
                     val description: String,
                     val avatar: String,
-                    val userId:String)
+                    val userId:String)*/
