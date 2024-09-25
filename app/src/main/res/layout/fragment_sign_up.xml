@@ -34,11 +34,25 @@
         android:id="@+id/etEmailSignUpFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="101dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="100dp"
         android:ems="10"
         android:inputType="text"
         android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNameSignUpFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailSignUpFragment"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
