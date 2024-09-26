@@ -24,7 +24,9 @@ abstract class AppLocalDb : RoomDatabase() {
                     context.applicationContext,
                     AppLocalDb::class.java,
                     "app_local_db"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }

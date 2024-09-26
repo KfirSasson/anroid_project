@@ -12,9 +12,6 @@ interface TrainingDao {
     @Delete
     suspend fun deleteTraining(training: Training)
 
-    @Query("SELECT * FROM Training WHERE trainingId = :id")
-    suspend fun getTrainingById(id: Int): Training?
-
     @Query("SELECT * FROM Training")
     suspend fun getAllTrainings(): List<Training>
 }

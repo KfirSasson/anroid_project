@@ -42,6 +42,7 @@ android {
 dependencies {
 
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
     val nav_version = "2.8.1"
 
     implementation("androidx.navigation:navigation-fragment:$nav_version")
