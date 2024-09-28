@@ -1,6 +1,5 @@
 package com.example.kotlinfinal
 
-import UserDao
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -94,6 +93,7 @@ class SignUpFragment : Fragment() {
                     val firebaseUser = auth.currentUser
                     firebaseUser?.let {
                         val newUser = User(
+                            userId = firebaseUser.uid,
                             userName = name,
                             userEmail = email,
                             userPassword = password

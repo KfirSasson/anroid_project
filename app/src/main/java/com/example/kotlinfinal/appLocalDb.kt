@@ -1,9 +1,14 @@
+package com.example.kotlinfinal
+
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.kotlinfinal.Model.Training
 import com.example.kotlinfinal.Model.User
+import com.example.kotlinfinal.TrainingDao
+import com.example.kotlinfinal.UserDao
 
 // Annotate the class as a Room database
 @Database(entities = [User::class, Training::class], version = 1, exportSchema = false)

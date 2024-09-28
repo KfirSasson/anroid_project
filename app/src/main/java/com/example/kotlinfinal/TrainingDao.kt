@@ -1,3 +1,6 @@
+package com.example.kotlinfinal
+
+
 import androidx.room.*
 import com.example.kotlinfinal.Model.Training
 

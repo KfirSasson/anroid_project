@@ -1,3 +1,5 @@
+package com.example.kotlinfinal
+
 import androidx.room.*
 import com.example.kotlinfinal.Model.User
 
@@ -13,7 +15,7 @@ interface UserDao {
     suspend fun deleteUser(user: User)
 
     @Query("SELECT * FROM User WHERE userId = :id")
-    suspend fun getUserById(id: Int): User?
+    suspend fun getUserById(id: String): User?
 
     @Query("SELECT * FROM User")
     suspend fun getAllUsers(): List<User>

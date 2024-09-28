@@ -1,10 +1,19 @@
-plugins {
+/* {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("androidx.navigation.safeargs.kotlin")
-    kotlin("kapt")
     id("com.google.gms.google-services")
+    kotlin("kapt")
+}*/
+
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
+    id("com.google.gms.google-services")
+    id("kotlin-kapt") // Correct way to apply kapt plugin
 }
+
 
 android {
     namespace = "com.example.kotlinfinal"
@@ -69,3 +78,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+kapt {
+    correctErrorTypes = true
+}

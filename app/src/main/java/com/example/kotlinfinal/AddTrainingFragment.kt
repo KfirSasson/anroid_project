@@ -72,7 +72,7 @@ class AddTrainingFragment : Fragment() {
             .add(training)
             .addOnSuccessListener { documentReference ->
                 // Do not assign hashCode() to trainingId, let Room handle it
-               // saveTrainingToLocalDatabase(training)
+               saveTrainingToLocalDatabase(training)
                 Toast.makeText(requireContext(), "Training added successfully!", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
@@ -80,11 +80,11 @@ class AddTrainingFragment : Fragment() {
             }
     }
 
-   /* private fun saveTrainingToLocalDatabase(training: Training) {
+   private fun saveTrainingToLocalDatabase(training: Training) {
         // Save the training data to the local Room database
         val trainingDao = AppLocalDb.getDatabase(requireContext()).trainingDao()
         CoroutineScope(Dispatchers.IO).launch {
             trainingDao.insertTraining(training)
         }
-    }*/
+    }
 }
