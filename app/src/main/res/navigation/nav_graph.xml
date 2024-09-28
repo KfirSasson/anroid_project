@@ -16,7 +16,7 @@
             app:destination="@id/userFeedFragment" />
         <action
             android:id="@+id/action_trainingsFeedFragment_to_addTrainingFragment"
-            app:destination="@id/addTrainingFragment" />
+            app:destination="@id/profileFragment" />
     </fragment>
 
     <!-- User Feed Fragment -->
@@ -32,11 +32,13 @@
 
     <!-- Add Training Fragment -->
     <fragment
-        android:id="@+id/addTrainingFragment"
-        android:name="com.example.kotlinfinal.AddTrainingFragment"
-        android:label="Add Training"
-        tools:layout="@layout/fragment_add_training" />
-
+        android:id="@+id/profileFragment"
+        android:name="com.example.kotlinfinal.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <action
+        android:id="@+id/action_profileFragment_to_loginFragment"
+        app:destination="@id/loginFragment" />
     <!-- Login Fragment -->
     <fragment
         android:id="@+id/loginFragment"

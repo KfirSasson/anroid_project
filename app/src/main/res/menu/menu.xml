@@ -12,9 +12,9 @@
         android:title="User Feed" />
 
     <item
-        android:id="@+id/addTrainingFragment"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/avatar"
-        android:title="Add Training" />
+        android:title="Profile" />
 
     <item
         android:id="@+id/weatherFragment"
