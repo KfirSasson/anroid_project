@@ -57,6 +57,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment:$nav_version")
     implementation("androidx.navigation:navigation-ui:$nav_version")
 
+    implementation("com.google.firebase:firebase-storage-ktx:20.2.0")
     implementation("com.squareup.picasso:picasso:2.8")
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
