@@ -31,7 +31,7 @@ class UserFeedFragment : Fragment() {
         trainingRecyclerView?.setHasFixedSize(true)
         trainingRecyclerView?.layoutManager = LinearLayoutManager(context)
 
-        val adapter = TrainingRecyclerAdapter(userTrainings)
+        val adapter = userTrainings?.let { TrainingRecyclerAdapter(it) }
         trainingRecyclerView?.adapter = adapter
 
         return view
