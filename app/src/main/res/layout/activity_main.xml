@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@color/black"
         app:menu="@menu/menu"
-        app:itemIconSize="24dp"
+        app:itemIconSize="33dp"
         app:itemIconTint="@color/icon_color"
         app:itemTextColor="@color/bottom_nav_text_selector"
         app:layout_constraintBottom_toBottomOf="parent"

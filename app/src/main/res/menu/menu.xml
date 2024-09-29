@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/trainingsFeedFragment"
-        android:icon="@drawable/avatar"
+        android:icon="@drawable/weight"
         android:title="Trainings" />
 
     <item
         android:id="@+id/userFeedFragment"
-        android:icon="@drawable/avatar"
-        android:title="User Feed" />
+        android:icon="@drawable/weight1"
+        android:title="My Feed" />
 
     <item
         android:id="@+id/profileFragment"
-        android:icon="@drawable/avatar"
+        android:icon="@drawable/profile"
         android:title="Profile" />
 
     <item
         android:id="@+id/weatherFragment"
-        android:icon="@drawable/avatar"
+        android:icon="@drawable/sun"
         android:title="Weather" />
 
 </menu>
