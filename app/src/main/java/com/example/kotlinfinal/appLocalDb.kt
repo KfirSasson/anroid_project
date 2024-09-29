@@ -10,15 +10,12 @@ import com.example.kotlinfinal.Model.User
 import com.example.kotlinfinal.TrainingDao
 import com.example.kotlinfinal.UserDao
 
-// Annotate the class as a Room database
-@Database(entities = [User::class, Training::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Training::class], version = 2, exportSchema = false)
 abstract class AppLocalDb : RoomDatabase() {
 
-    // Define DAOs
     abstract fun userDao(): UserDao
     abstract fun trainingDao(): TrainingDao
 
-    // Singleton instance
     companion object {
         @Volatile
         private var INSTANCE: AppLocalDb? = null

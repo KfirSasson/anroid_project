@@ -46,9 +46,7 @@ class SignUpFragment : Fragment() {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
 
-            // Validate input fields
             if (validateInput(name, email, password)) {
-                // Proceed to sign up the user if validation passes
                 signUpUser(name, email, password)
             }
         }
@@ -99,7 +97,6 @@ class SignUpFragment : Fragment() {
                             userPassword = password
                         )
 
-                        // Save user info to Room Database
                         saveUserToLocalDatabase(newUser)
 
                         Toast.makeText(requireContext(), "Sign Up Successful", Toast.LENGTH_SHORT).show()

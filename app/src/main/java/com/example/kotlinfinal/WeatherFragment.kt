@@ -28,10 +28,8 @@ class WeatherFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_weather, container, false)
 
-        // Initialize UI elements
         textView = view.findViewById(R.id.textView)
         cityInput = view.findViewById(R.id.cityInput)
         getWeatherButton = view.findViewById(R.id.getWeatherButton)
@@ -42,7 +40,6 @@ class WeatherFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize Retrofit
         val retrofit = Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
@@ -50,19 +47,15 @@ class WeatherFragment : Fragment() {
 
         val weatherService = retrofit.create(WeatherApiService::class.java)
 
-        // Set button click listener
         getWeatherButton.setOnClickListener {
             val city = cityInput.text.toString()
 
-            // Check if the city input is not empty
             if (city.isNotEmpty()) {
-                // Make the API call
                 weatherService.getWeather(city, apiKey).enqueue(object : Callback<WeatherResponse> {
                     override fun onResponse(call: Call<WeatherResponse>, response: Response<WeatherResponse>) {
                         if (response.isSuccessful) {
                             val weather = response.body()
                             weather?.let {
-                                // Update UI with weather info
                                 textView.text = "City: ${it.name}\nTemp: ${it.main.temp}°C\nDescription: ${it.weather[0].description}"
                             }
                         } else {

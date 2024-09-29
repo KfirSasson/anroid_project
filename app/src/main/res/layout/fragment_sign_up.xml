@@ -39,7 +39,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <!-- Name Input -->
     <EditText
         android:id="@+id/etNameSignUpFragment"
         android:layout_width="0dp"
@@ -49,12 +48,12 @@
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:backgroundTint="#A3E49B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintWidth_default="spread" />
 
-    <!-- Email Input -->
     <EditText
         android:id="@+id/etEmailSignUpFragment"
         android:layout_width="0dp"
@@ -64,13 +63,13 @@
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:backgroundTint="#A3E49B"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordSignUpFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etNameSignUpFragment"
         app:layout_constraintWidth_default="spread" />
 
-    <!-- Password Input -->
     <EditText
         android:id="@+id/etPasswordSignUpFragment"
         android:layout_width="0dp"
@@ -80,12 +79,12 @@
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:backgroundTint="#A3E49B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etEmailSignUpFragment"
         app:layout_constraintWidth_default="spread" />
 
-    <!-- Sign Up Button -->
     <Button
         android:id="@+id/btnSignInFragment"
         android:layout_width="0dp"

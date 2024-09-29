@@ -5,45 +5,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="@drawable/background"
     tools:context=".WeatherFragment">
 
-    <!-- City Input Field -->
     <EditText
         android:id="@+id/cityInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:backgroundTint="#A3E49B"
         android:hint="Enter city name"
         android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:layout_constraintWidth_default="spread" />
 
-    <!-- Get Weather Button -->
     <Button
         android:id="@+id/getWeatherButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Get Weather"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/cityInput"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#A3E49B"
+        android:text="Get Weather"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cityInput"
         app:layout_constraintWidth_default="spread" />
 
-    <!-- Weather Info TextView -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Weather Info"
-        android:textSize="20sp"
+        android:layout_marginTop="130dp"
         android:gravity="center"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/getWeatherButton"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Weather Info"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getWeatherButton"
         app:layout_constraintWidth_default="spread" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="81dp"
+        android:fontFamily="cursive"
+        android:text="Weather"
+        android:textAlignment="center"
+        android:textColor="#A3E49B"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cityInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

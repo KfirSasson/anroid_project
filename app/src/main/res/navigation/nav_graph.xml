@@ -5,7 +5,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
-    <!-- Trainings Feed Fragment -->
     <fragment
         android:id="@+id/trainingsFeedFragment"
         android:name="com.example.kotlinfinal.TrainingsFeedFragment"
@@ -15,11 +14,13 @@
             android:id="@+id/action_trainingsFeedFragment_to_userFeedFragment"
             app:destination="@id/userFeedFragment" />
         <action
-            android:id="@+id/action_trainingsFeedFragment_to_addTrainingFragment"
+            android:id="@+id/action_trainingsFeedFragment_to_ProfileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_trainingsFeedFragment_to_addTrainingFragment"
+            app:destination="@id/addTrainingFragment" />
     </fragment>
 
-    <!-- User Feed Fragment -->
     <fragment
         android:id="@+id/userFeedFragment"
         android:name="com.example.kotlinfinal.UserFeedFragment"
@@ -30,7 +31,6 @@
             app:destination="@id/trainingsFeedFragment" />
     </fragment>
 
-    <!-- Add Training Fragment -->
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.kotlinfinal.ProfileFragment"
@@ -39,7 +39,7 @@
     <action
         android:id="@+id/action_profileFragment_to_loginFragment"
         app:destination="@id/loginFragment" />
-    <!-- Login Fragment -->
+
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.kotlinfinal.LoginFragment"
@@ -53,7 +53,6 @@
             app:destination="@id/trainingsFeedFragment" />
     </fragment>
 
-    <!-- SignUp Fragment -->
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.kotlinfinal.SignUpFragment"
@@ -64,10 +63,17 @@
             app:destination="@id/loginFragment" />
     </fragment>
 
-    <!-- Weather Fragment -->
     <fragment
         android:id="@+id/weatherFragment"
         android:name="com.example.kotlinfinal.WeatherFragment"
         android:label="Weather"
         tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/addTrainingFragment"
+        android:name="com.example.kotlinfinal.AddTrainingFragment"
+        android:label="Add Training"
+        tools:layout="@layout/fragment_add_training" />
+    <action
+        android:id="@+id/action_addTrainingFragment_to_trainingsFeedFragment"
+        app:destination="@id/trainingsFeedFragment" />
 </navigation>
